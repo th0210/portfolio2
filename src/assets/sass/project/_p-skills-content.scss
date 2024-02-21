@@ -1,0 +1,48 @@
+@use "../global" as global;
+
+.p-skills-content {
+    position: relative;
+    margin-top: 180px;
+
+    @include global.mq(tb) {
+        margin-top: 140px;
+    }
+
+    @include global.mq(tb) {
+        margin-top: 100px;
+    }
+}
+
+.p-skills-content__lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include global.mq(sp) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0;
+        row-gap: 30px;
+    }
+}
+
+.p-skills-content__list {
+    text-align: center;
+
+    img {
+        width: 80%;
+        height: auto;
+        display: inline-block;
+        object-fit: cover;
+    }
+}
+
+.p-skills-content__title {
+    text-align: center;
+    color: global.$text-color1;
+    font-family: global.$ff-jp;
+    padding: 4px 0;
+
+    @include global.mq(sp) {
+        font-size: 14px;
+    }
+}

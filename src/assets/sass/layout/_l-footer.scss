@@ -1,0 +1,31 @@
+@use "../global" as global;
+
+.l-footer {
+    color: global.$text-color2;
+    background-color: global.$text-color1;
+    padding: 70px 0 10px 0;
+
+    @include global.mq(tb) {
+        padding: 50px 0 10px 0;
+    }
+
+    @include global.mq(sp) {
+        padding: 30px 60px 10px 60px;
+    }
+}
+
+.l-footer__copyright {
+    font-size: 14px;
+    font-family: global.$ff-en;
+    text-align: center;
+    margin-top: 50px;
+
+    @include global.mq(tb) {
+        margin-top: 50px;
+    }
+
+    @include global.mq(sp) {
+        font-size: 10px;
+        margin-top: 30px;
+    }
+}

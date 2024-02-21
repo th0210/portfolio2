@@ -1,0 +1,119 @@
+@use "../global" as global;
+
+.p-projects {
+    margin-top: 168px;
+    padding: 40px;
+    position: relative;
+
+    @include global.mq(tb) {
+        padding: 40px 30px;
+        margin-top: 140px;
+    }
+
+    @include global.mq(sp) {
+        padding: 40px 20px;
+        margin-top: 80px;
+    }
+
+    &::before {
+        content: "PROJECTS";
+        font-size: 100px;
+        color: #F0F0F0; 
+        line-height: 1;
+        font-family: global.$ff-en;
+        font-weight: global.$black;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include global.mq(tb) {
+            font-size: 80px;
+        }
+
+        @include global.mq(sp) {
+            font-size: 50px;
+        }
+    }
+}
+
+.p-projects__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.p-projects__title {
+    justify-content: center;
+    transform: translateY(48px);
+
+    @include global.mq(tb) {
+        transform: translateY(28px);
+    }
+
+    @include global.mq(sp) {
+        transform: translateY(4px);
+    }
+} 
+
+.p-projects__content {
+    display: grid;
+    column-gap: 46px;
+    row-gap: 60px;
+    grid-template-columns: repeat(3, 1fr); 
+    margin-top: 174px;
+
+    @include global.mq(tb) {
+        display: grid;
+        column-gap: 30px;
+        row-gap: 40px;
+        grid-template-columns: repeat(2, 1fr); 
+        margin-top: 120px;
+    }
+
+    @include global.mq(sp) {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    &.no-posts {
+        margin-top: 100px;
+        display: block;
+
+        @include global.mq(tb) {
+            margin-top: 60px;
+        }
+    }
+}
+
+.p-projects__button {
+    text-align: center;
+    margin-top: 80px;
+
+    @include global.mq(tb) {
+        margin-top: 80px;
+    }
+
+    @include global.mq(tb2) {
+        margin-top: 50px;
+    }
+}
+
+.p-projects__no-posts {
+    text-align: center;
+
+    img {
+        display: inline-block;
+    }
+}
+
+.p-projects__no-posts__text {
+    font-size: 18px;
+    font-family: global.$ff-jp;
+    margin-top: 20px;
+
+    @include global.mq(tb) {
+        font-size: 16px;
+    }
+}

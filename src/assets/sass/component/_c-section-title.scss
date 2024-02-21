@@ -1,0 +1,39 @@
+@use "../global" as global;
+
+.c-section-title {
+    font-size: 32px;
+    color: global.$text-color1;
+    font-family: global.$ff-en;
+    display: inline-block;
+    position: relative;
+
+    @include global.mq(tb) {
+        font-size: 28px;
+    }
+
+    @include global.mq(sp) {
+        font-size: 22px;
+    }
+
+    &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: #4CAF50;
+        position: absolute;
+        bottom: 0;
+        left: calc(-20px - 12px);
+
+        @include global.mq(tb) {
+            width: 16px;
+            height: 16px;
+            left: -28px;
+        }
+
+        @include global.mq(sp) {
+            width: 12px;
+            height: 12px;
+            left: -20px;
+        }
+    }
+} 

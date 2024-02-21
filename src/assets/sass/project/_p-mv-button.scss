@@ -1,0 +1,138 @@
+@use "../global" as global;
+
+.p-mv-button {
+    width: 100%;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.8;
+
+        //ホバー時△が右に動く
+        .p-mv-button__link {
+            &::after {
+                right: 14px;
+            }
+        }
+    }
+}
+
+.p-mv-button__link {
+    font-size: 32px;
+    height: 120px;
+    color: global.$text-color2;
+    font-family: global.$ff-en;
+    font-weight: global.$bold;
+    background-color: #68A3DD;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include global.mq(tb) {
+        font-size: 26px;
+        height: 100px;
+    }
+
+    &.second {
+        background-color: #235587; 
+    }
+
+    &.last {
+        background-color: global.$main-color;
+    }
+
+    p {
+        height: 32px;
+        display: inline-block;
+        transform: translateY(80%);
+        position: relative;
+
+        @include global.mq(tb) {
+            height: 26px;
+            transform: translateY(75%);
+        }
+
+        &.projects {
+            &::before {
+                content: "制作物・実績";
+                font-size: 20px;
+                font-family: global.$ff-jp;
+                font-weight: global.$regular;
+                white-space: nowrap; 
+                position: absolute;
+                bottom: -36px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include global.mq(tb) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &.portfolios {
+            &::before {
+                content: "ポートフォリオ";
+                font-size: 20px;
+                font-family: global.$ff-jp;
+                font-weight: global.$regular;
+                white-space: nowrap; 
+                position: absolute;
+                bottom: -36px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &.skills {
+            &::before {
+                content: "できること";
+                font-size: 20px;
+                font-family: global.$ff-jp;
+                font-weight: global.$regular;
+                white-space: nowrap; 
+                position: absolute;
+                bottom: -36px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: global.$text-color2;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+        }
+    }
+
+    //白枠
+    &::before {
+        content: "";
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        border: 2px solid global.$text-color2;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+
+    //三角
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 16px solid #fff;
+        border-right: 0;
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        transition: 0.3s;
+    }
+} 

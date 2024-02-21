@@ -1,0 +1,111 @@
+@use "../global" as global;
+
+.p-page-projects-card {
+    font-family: global.$ff-jp;
+}
+
+.p-page-projects-card__img {
+    img {
+        width: 100%;
+    }
+}
+
+.p-page-projects-card__genre {
+    margin-top: 22px;
+    padding-bottom: 8px;
+    display: inline-block;
+    position: relative;
+
+    @include global.mq(tb) {
+        font-size: 14px;
+        padding-bottom: 6px;
+    }
+
+    @include global.mq(tb2) {
+        margin-top: 16px;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: global.$main-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.p-page-projects-card__title {
+    text-align: center;
+    margin-top: 16px;
+
+    @include global.mq(tb) {
+        font-size: 18px;
+    }
+
+    @include global.mq(tb2) {
+        margin-top: 12px;
+    }
+}
+
+.p-page-portfolios-card__id {
+    text-align: center;
+    margin-top: 8px;
+
+    @include global.mq(tb) {
+        font-size: 14px;
+    }
+}
+
+.p-page-portfolios-card__password {
+    text-align: center;
+    margin-top: 4px;
+
+    @include global.mq(tb) {
+        font-size: 14px;
+    }
+}
+.p-page-projects-card__date {
+    color: #686868;
+    text-align: center;
+    margin-top: 14px;
+
+    @include global.mq(tb) {
+        font-size: 14px;
+    }
+
+    @include global.mq(tb2) {
+        margin-top: 12px;
+    }
+}
+
+.p-page-projects-card__tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    row-gap: 6px;
+    margin-top: 18px;
+
+    @include global.mq(tb) {
+        font-size: 14px;
+    }
+
+    @include global.mq(tb2) {
+        margin-top: 14px;
+    }
+}
+
+.p-page-projects-card__text {
+    margin-top: 30px;
+}
+
+.p-page-projects-card__reference {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.p-page-projects-card__reference__link {
+    color: global.$main-color;
+}

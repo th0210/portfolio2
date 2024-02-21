@@ -1,0 +1,65 @@
+@use "../global" as global;
+
+.c-to-top {
+    position: fixed;
+    bottom: 34px;
+    right: 34px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+
+    @include global.mq(tb) {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    @include global.mq(sp) {
+        bottom: 20px;
+        right: 12px;
+    }
+
+    &.is-show {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.c-to-top__link {
+    width: 60px;
+    height: 60px;
+    background-color: global.$text-color2;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #D1D1D1;
+
+    @include global.mq(sp) {
+        width: 40px;
+        height: 40px;
+    }
+
+    &:hover {
+        .c-to-top__img {
+            top: calc(50% - 6px);
+
+            @include global.mq(sp) {
+                top: calc(50% - 3px);
+            }
+        }
+    }
+}
+
+.c-to-top__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+
+    @include global.mq(tb) {
+        width: 30%;
+     }
+
+    @include global.mq(sp) {
+       width: 40%;
+    }
+}

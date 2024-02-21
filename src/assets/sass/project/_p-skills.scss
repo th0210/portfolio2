@@ -1,0 +1,67 @@
+@use "../global" as global;
+
+.p-skills {
+    margin: 168px 0 120px 0;
+    position: relative;
+
+    @include global.mq(tb) {
+        margin: 120px 0 120px 0;
+    }
+
+    @include global.mq(sp) {
+        margin: 60px 0;
+    }
+
+    &::before {
+        content: "SKILLS";
+        font-size: 100px;
+        color: #F0F0F0; 
+        line-height: 1;
+        font-family: global.$ff-en;
+        font-weight: global.$black;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include global.mq(tb) {
+            font-size: 80px;
+        }
+
+        @include global.mq(sp) {
+            font-size: 50px;
+        }
+    }
+}
+
+.p-skills__inner {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @include global.mq(sp) {
+        padding: 0 20px;
+    }
+}
+
+.p-skills__title {
+    justify-content: center;
+    transform: translateY(84px);
+
+    @include global.mq(tb) {
+        transform: translateY(66px);
+    }
+
+    @include global.mq(sp) {
+        transform: translateY(42px);
+    }
+}
+
+.p-skills__button {
+    text-align: center;
+    margin-top: 80px;
+
+    @include global.mq(sp) {
+        margin-top: 50px;
+    }
+}

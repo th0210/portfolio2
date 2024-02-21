@@ -1,0 +1,78 @@
+@use "../global" as global;
+
+.p-page-skills {
+    margin: 180px 0 120px 0;
+    position: relative;
+
+    @include global.mq(tb) {
+        margin: 180px 30px;
+    }
+
+    @include global.mq(sp) {
+        margin: 140px 20px 100px 20px;
+    }
+
+    &::before {
+        content: "SKILLS";
+        font-size: 100px;
+        color: #F0F0F0; 
+        line-height: 1;
+        font-family: global.$ff-en;
+        font-weight: global.$black;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        @include global.mq(tb) {
+            font-size: 80px;
+        }
+
+        @include global.mq(sp) {
+            font-size: 50px;
+        }
+    }
+}
+
+.p-page-skills__title {
+    transform: translateY(82px);
+
+    @include global.mq(tb) {
+        transform: translateY(66px);
+    }
+
+    @include global.mq(sp) {
+        transform: translateY(40px);
+    }
+}
+
+.p-page-skills__inner {
+    max-width: 890px;
+    margin: 0 auto;
+    margin-top: 208px;
+
+    @include global.mq(tb) {
+        margin-top: 180px;
+    }
+
+    @include global.mq(sp) {
+        margin-top: 120px;
+    }
+}
+
+.p-page-skills__content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    @include global.mq(tb) {
+        gap: 60px;
+    }
+
+    @include global.mq(tb) {
+        gap: 50px;
+    }
+}
+
+
+

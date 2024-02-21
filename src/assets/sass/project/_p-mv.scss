@@ -1,0 +1,56 @@
+@use "../global" as global;
+
+.p-mv {
+    width: 100%;
+    height: calc(100vh - 120px); //p-mv-buttonの高さを引いてる
+    position: relative;
+
+    @include global.mq(tb) {
+        height: calc(100vh - 100px);
+    }
+
+    @include global.mq(tb2) {
+        height: 100vh;
+    }
+}
+
+.p-mv__bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-mv__title {
+    font-size: 132px;
+    color: global.$text-color2;
+    font-family: global.$ff-en;
+    font-weight: global.$bold;
+    position: absolute;
+    top: calc(50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include global.mq(tb) {
+        font-size: 100px;
+    }
+
+    @include global.mq(sp) {
+        font-size: 60px;
+    }
+
+    span {
+        font-size: 64px;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include global.mq(tb) {
+            font-size: 44px;
+        }
+
+        @include global.mq(sp) {
+            font-size: 34px;
+        }
+    }
+}

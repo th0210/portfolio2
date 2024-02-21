@@ -1,0 +1,16 @@
+@use "../global" as global;
+
+.p-portfolios-content {
+    width: 100%;
+    margin-top: 200px;
+    margin: 0 auto;
+    position: relative;
+
+    @include global.mq(tb) {
+        margin-top: 120px;
+    }
+
+    @include global.mq(sp) {
+        margin-top: 60px;;
+    }
+}

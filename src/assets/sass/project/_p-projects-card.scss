@@ -1,0 +1,102 @@
+@use "../global" as global;
+
+.p-projects-card {
+}
+
+.p-projects-card__img {
+}
+
+.p-projects-card__link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 65%;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.3s;
+    }
+
+    img {
+        transition: 0.3s;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &:hover {
+        &::after {
+            opacity: 0.4;
+            visibility: visible;
+        }
+
+        img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.p-projects-card__texts {
+    font-family: global.$ff-jp;
+    margin-top: 20px;
+
+    @include global.mq(tb) {
+        margin-top: 12px;
+    }
+}
+
+.p-projects-card__tag {
+    padding-bottom: 8px;
+    display: inline-block;
+    position: relative;
+
+    @include global.mq(tb) {
+        font-size: 14px;
+        padding-bottom: 6px;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: global.$main-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.p-projects-card__title {
+    margin-top: 16px;
+
+    @include global.mq(tb) {
+        font-size: 16px;
+        margin-top: 12px
+    }
+}
+
+.p-projects-card__title__link {
+    transition: 0.3s;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.p-projects-card__date {
+    color: #686868;
+    margin-top: 22px;
+
+    @include global.mq(tb) {
+        font-size: 14px;
+        margin-top: 18px;
+    }
+}

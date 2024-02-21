@@ -1,0 +1,37 @@
+/*------- 色 -------*/
+/*テキスト*/
+$text-color1: #272727; 
+$text-color2: #fff; 
+
+/*ベース*/
+$main-color: #2C3E50;
+$bg-color: #F0F0F0;
+
+/*リンク*/
+$link-color: #888;
+
+/*影*/
+$shadow: #00000029;
+
+/*------- フォント -------*/
+$ff-en: 'Noto Serif JP', serif;
+$ff-jp: 'Noto Sans JP', sans-serif;
+
+/*------- 文字の太さ -------*/
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$black: 900;
+
+/*------- ブレークポイント -------*/
+$breakpoints: (
+    "sp": "screen and (max-width: 599px)",
+    "tb2": "screen and (max-width: 900px)",
+    "tb": "screen and (max-width: 1024px)",
+    "pc": "screen and (min-width: 1025px)"
+);
+
+/*------- 重なり(z-index) -------*/
+$hamburger: 120;
+$drawer: 110;
+$header: 100;

@@ -1,0 +1,12 @@
+@use "../global" as global;
+
+.p-mv-menu {
+}
+
+.p-mv-menu__wrapper {
+    display: flex;
+
+    @include global.mq(tb2) {
+        display: block;
+    }
+}

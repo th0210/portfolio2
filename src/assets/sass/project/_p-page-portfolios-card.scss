@@ -1,0 +1,119 @@
+@use "../global" as global;
+
+.p-page-portfolios-card {
+    font-family: global.$ff-jp;
+}
+
+.p-page-portfolios-card__img {
+    img {
+        width: 100%;
+    }
+}
+
+.p-page-portfolios-card__genre {
+    margin-top: 22px;
+    padding-bottom: 8px;
+    display: inline-block;
+    position: relative;
+
+    @include global.mq(tb) {
+        font-size: 14px;
+        padding-bottom: 6px;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: global.$main-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.p-page-portfolios-card__title {
+    text-align: center;
+    margin-top: 16px;
+
+    @include global.mq(tb) {
+        font-size: 18px;
+    }
+}
+
+.p-page-portfolios-card__code__link {
+    font-size: 14px;
+    color: global.$text-color2;
+    font-weight: global.$bold;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: #A3A3A3;
+    padding: 6px 26px;
+    margin-top: 16px;
+    transition: 0.3s;
+    position: relative;
+
+    &:hover {
+        opacity: 0.7;
+
+        &::after {
+            right: 3px;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-left: 6px solid #fff;
+        border-right: 0;
+        position: absolute;
+        top: 50%;
+        right: 7px;
+        transform: translateY(-50%);
+        transition: 0.3s;
+    }
+
+    @include global.mq(tb) {
+        padding: 4px 20px;
+    }
+}
+
+.p-page-portfolios-card__date {
+    color: #686868;
+    text-align: center;
+    margin-top: 8px;
+
+    @include global.mq(tb) {
+        font-size: 14px;
+    }
+}
+
+.p-page-portfolios-card__tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    row-gap: 6px;
+    margin-top: 18px;
+
+    @include global.mq(tb) {
+
+    }
+}
+
+.p-page-portfolios-card__text {
+    margin-top: 30px;
+}
+
+.p-page-portfolios-card__reference {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.p-page-portfolios-card__reference__link {
+    color: global.$main-color;
+}

@@ -1,0 +1,91 @@
+@use "../global" as global;
+
+.p-page-portfolios {
+    padding-top: 88px;
+    margin: 180px 30px;
+    position: relative;
+
+    @include global.mq(tb) {
+        margin: 180px 30px;
+    }
+
+    @include global.mq(sp) {
+        margin: 120px 20px;
+    }
+
+    &::before {
+        content: "PORTFOLIOS";
+        font-size: 100px;
+        color: #F0F0F0; 
+        line-height: 1;
+        font-family: global.$ff-en;
+        font-weight: global.$black;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include global.mq(tb) {
+            font-size: 80px;
+        }
+
+        @include global.mq(sp) {
+            font-size: 50px;
+        }
+    }
+}
+
+.p-page-portfolios__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.p-page-portfolios__title {
+    transform: translateY(-4px);
+
+    @include global.mq(tb) {
+        transform: translateY(-24px);
+    }
+
+    @include global.mq(sp) {
+        transform: translateY(-46px);
+    }
+}
+
+.p-page-portfolios__description {
+    text-align: center;
+    margin-top: 120px;
+    line-height: 1.6;
+
+    @include global.mq(tb) {
+        margin-top: 80px;
+    }
+
+    @include global.mq(sp) {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    span {
+        color: red;
+    }
+}
+
+.p-page-portfolios__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    row-gap: 70px;
+    margin-top: 120px;
+
+    @include global.mq(tb) {
+        gap: 30px;
+        row-gap: 50px;
+        margin-top: 100px;
+    }
+
+    @include global.mq(sp) {
+        display: flex;
+        flex-direction: column;
+    }
+}

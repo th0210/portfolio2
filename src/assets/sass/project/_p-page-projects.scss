@@ -1,0 +1,123 @@
+@use "../global" as global;
+
+.p-page-projects {
+    padding-top: 88px;
+    margin: 180px 30px;
+    position: relative;
+
+    @include global.mq(tb) {
+        margin: 180px 30px;
+    }
+
+    @include global.mq(sp) {
+        margin: 120px 20px;
+    }
+
+    &::before {
+        content: "PROJECTS";
+        font-size: 100px;
+        color: #F0F0F0; 
+        line-height: 1;
+        font-family: global.$ff-en;
+        font-weight: global.$black;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include global.mq(tb) {
+            font-size: 80px;
+        }
+
+        @include global.mq(sp) {
+            font-size: 50px;
+        }
+    }
+}
+
+.p-page-projects__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.p-page-projects__title {
+    @include global.mq(tb) {
+        transform: translateY(-24px);
+    }
+
+    @include global.mq(sp) {
+        transform: translateY(-46px);
+    }
+}
+
+.p-page-projects__description {
+    text-align: center;
+    margin-top: 120px;
+    line-height: 1.6;
+
+    @include global.mq(tb) {
+        margin-top: 80px;
+    }
+
+    @include global.mq(sp) {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    span {
+        color: red;
+    }
+}
+
+.p-page-projects__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    row-gap: 70px;
+    margin-top: 120px;
+
+    @include global.mq(tb) {
+        gap: 30px;
+        row-gap: 50px;
+        margin-top: 80px;
+    }
+
+    @include global.mq(tb2) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    @include global.mq(sp) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    &.no-posts {
+        margin-top: 40px;
+        display: block;
+
+        @include global.mq(tb) {
+            margin-top: 0;
+        }
+    }
+}
+
+.p-page-projects__no-posts {
+    text-align: center;
+
+    img {
+        display: inline-block;
+    }
+}
+
+.p-page-projects__no-posts__text {
+    font-size: 18px;
+    font-family: global.$ff-jp;
+    margin-top: 20px;
+
+    @include global.mq(tb) {
+        font-size: 16px;
+    }
+}
